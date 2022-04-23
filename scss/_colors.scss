@@ -1,0 +1,29 @@
+$bggray:#E5E5E5;
+$txtgray:#A9A9A9;
+$txtgray2:#BDBDBD;
+$txtdark:#4E5150;
+
+
+.header{
+    &__title{
+        color: $txtdark;
+    }
+
+    &__location{
+        color: $txtgray;
+    }
+
+    &__stats{
+        &__wrapper{
+            background-color: $bggray;
+        }
+    }
+}
+
+.num{
+    color: $txtdark;
+}
+
+.type{
+    color: $txtgray2;
+}

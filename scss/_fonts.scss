@@ -1,0 +1,41 @@
+@import 'functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body{
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.header{
+    &__title{
+        font-size: rem(14);
+    }
+
+    &__location{
+        font-size: rem(10);
+    }
+}
+
+.num, .type{
+    font-size: rem(12);
+}
+
+@media screen and (min-width:992px) {
+    .header{
+        &__title{
+            font-size: rem(24);
+        }
+        &__location{
+            font-size: rem(14);
+        }
+    }
+
+    .num{
+        font-size: rem(18);
+    }
+
+    .type{
+        font-size: rem(14);
+    }
+}

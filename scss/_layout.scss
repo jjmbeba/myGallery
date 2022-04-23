@@ -1,0 +1,131 @@
+@import 'functions';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    padding-top: rem(30);
+    padding-inline: rem(15);
+    padding-bottom: rem(85);
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__img{
+        max-width: rem(101.76);
+        height: rem(101.76);
+        border-radius: rem(16);
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: rem(16);
+        }
+    }
+    &__title{
+        margin-top: rem(11.24);
+    }
+    &__location{
+        margin-top: rem(4);
+    }
+
+    &__stats{
+        margin-top: rem(12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(12);
+
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            max-width: rem(78);
+            height: rem(52);
+            border-radius: rem(12);
+            padding-inline: rem(26);
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, rem(109.52));
+    gap: rem(11.7);
+    margin-top: rem(39);
+
+    &__item{
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: rem(12);
+        }
+    }
+}
+
+#one{
+    grid-column: 1 / span 1;
+}
+
+#two{
+    grid-column:  2 / span 2;
+}
+
+#three{
+    grid-column: 1 / span 2;
+}
+
+#four{
+    grid-row: 2 / span 2;
+    grid-column: 3 / 4;
+}
+
+@media screen and (min-width:992px){
+    body{
+        padding-top: rem(60);
+        padding-inline: rem(240);
+    }
+
+    .header{
+        &__img{
+            max-width:rem(156);
+            height: rem(156);
+        }
+
+        &__title{
+            margin-top: rem(16);
+        }
+
+        &__location{
+            margin-top: rem(8);
+        }
+
+        &__stats{
+            margin-top: rem(24);
+
+            &__wrapper{
+                max-width: rem(100);
+                height: rem(67);
+                padding-inline: rem(31);
+            }
+        }
+    }
+    .grid{
+        margin-top: rem(64);
+        gap: rem(32);
+        grid-template-rows: repeat(3, rem(299));
+    }
+}
